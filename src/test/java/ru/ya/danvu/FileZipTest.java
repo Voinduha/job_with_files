@@ -16,10 +16,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FileZipTest {
 
-    @DisplayName("Парсим zip архив из csv")
+    @DisplayName("Работа с zip файлом")
     @Test
     void zipFile() throws Exception {
-        ZipFile zip = new ZipFile("src/test/resources/file.zip");
+        ZipFile zip = new ZipFile("src/test/resources/files/file.zip");
 
         ZipEntry csvEntry = zip.getEntry("example.csv");
         try (InputStream csvStream = zip.getInputStream(csvEntry)) {
